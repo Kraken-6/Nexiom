@@ -1,54 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome to Your Website</title>
-<link rel="stylesheet" href="style.css" />
-<script src="script.js"></script>
-<script defer src="activePage.js"></script>
-<style>
-
-</style>
-
+<head>
+    <style>
+        .robot-3d {
+            position: absolute;
+            top: 0;
+            right: -20%;
+        }
+        
+        .button-30 {
+            display: flex;
+            margin-left: 60px;
+            align-items: center;
+            appearance: none;
+            background-color: #FCFCFD;
+            border-radius: 4px;
+            border-width: 0;
+            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #36395A;
+            cursor: pointer;
+            font-family: "JetBrains Mono", monospace;
+            height: 48px;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s, transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow, transform;
+            font-size: 18px;
+        }
+        
+        .button-30:focus {
+            box-shadow: #dadada 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        }
+        
+        .button-30:hover {
+            box-shadow: rgba(243, 243, 243, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+        
+        .button-30:active {
+            box-shadow: #e0e0e0 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+        
+        @media(max-width:600px) {
+            .robot-3d {
+                scale: 0.8;
+                margin-top: -200px;
+                right: 2%;
+            }
+            .container-3d {
+                margin-top: 100px;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
-    <div class='light x1'></div>
-    <div class='light x2'></div>
-    <div class='light x3'></div>
-    <div class='light x4'></div>
-    <div class='light x5'></div>
-    <div class='light x6'></div>
-    <div class='light x7'></div>
-    <div class='light x8'></div>
-    <div class='light x9'></div>
+<body style="background: black;">
+    <div class="container-3d">
+        <h1 style="margin-top: 200px; margin-left:50px; color: white; font-family: Arial, sans-serif;">Welcome to</h1>
+        <img src="logo.png" alt="NEXIOM logo" style="margin-left:50px; width: 500px; height: auto; margin-bottom: 20px;">
+        <button onclick="location.href='home.html'" class="button-30" role="button">Continue</button>
 
-    <header>
-        <img src="logo.png" width="300px" alt="NEXIOM logo">
 
-        <nav>
 
-            <ul class="sidebar">
-                <li onclick=closeSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li><a href="indexhtml">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <ul>
 
-                <li class="hideOnMobile"><a href="index.html">Home</a></li>
-                <li class="hideOnMobile"><a href="about.html">About</a></li>
-                <li class="hideOnMobile"><a href="services.html">Services</a></li>
-                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
-                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-            </ul>
+        <spline-viewer class="robot-3d" url="https://prod.spline.design/wNZrnb-aSwOVRFJ4/scene.splinecode"></spline-viewer>
 
-        </nav>
-    </header>
+    </div>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.37/build/spline-viewer.js"></script>
 
 
 
