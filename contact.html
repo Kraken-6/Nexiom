@@ -54,18 +54,22 @@
                 <div class="right-side">
                     <div class="topic-text">Send us a message</div>
                     <p style="color: white;">If you have any types of quries related to our services, you can send us message from here. It's our pleasure to help you.</p>
-                    <form action="#">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="497985d5-d512-4a2f-8568-108e3a63178b">
                         <div class="input-box">
-                            <input type="text" placeholder="Enter your name">
+                            <input type="text" name="name" placeholder="Enter your name" required>
                         </div>
                         <div class="input-box">
-                            <input type="email" placeholder="Enter your email">
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-box">
+                            <input type="tel" name="number" placeholder="Enter your Phone Number" required>
                         </div>
                         <div class="input-box message-box">
-                            <textarea placeholder="Enter your message"></textarea>
+                            <textarea name="message" placeholder="Enter your message"></textarea required>
                         </div>
                         <div class="button">
-                            <input type="button" value="Send Now">
+                            <button type="submit">Submit Form</button>
                         </div>
                     </form>
                 </div>
