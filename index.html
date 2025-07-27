@@ -2,10 +2,8 @@
 
 <head>
     <style>
-        .robot-3d {
-            position: absolute;
-            top: 0;
-            right: -20%;
+        .container {
+            scale: 1;
         }
         
         .button-30 {
@@ -67,18 +65,20 @@
 </head>
 
 <body style="background: black;">
-    <div class="container-3d">
+    <div class="container">
         <h1 style="margin-top: 200px; margin-left:50px; color: white; font-family: Arial, sans-serif;">Welcome to</h1>
+
         <img src="logo.png" alt="NEXIOM logo" style="margin-left:50px; width: 500px; height: auto; margin-bottom: 20px;">
+        <h1 style="margin-top: 10px; margin-left:50px; color: white; font-family: Arial, sans-serif;">"Hello there! Thank you for visiting NEXIOM dive into a world of great content tailored just for you!"</h1>
         <button onclick="location.href='home.html'" class="button-30" role="button">Continue</button>
 
 
 
 
-        <spline-viewer class="robot-3d" url="https://prod.spline.design/wNZrnb-aSwOVRFJ4/scene.splinecode"></spline-viewer>
+
 
     </div>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.37/build/spline-viewer.js"></script>
+
 
 
 
