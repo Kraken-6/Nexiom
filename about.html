@@ -4,11 +4,21 @@
 <head meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>NEXIOM - About</title>
+<title>NEXIOM - Home</title>
 <link rel="stylesheet" href="style.css" />
 <script src="script.js"></script>
+<script defer src="activePage.js"></script>
 <style>
-
+    .content {
+        text-align: center;
+        color: white;
+        padding: 20px;
+        display: flex;
+    }
+    
+    .content p {
+        font-size: 20px;
+    }
 </style>
 
 </head>
@@ -30,26 +40,72 @@
 
         <nav>
 
-            <ul class="sidebar">
+            <ul id="navList" class="sidebar">
                 <li onclick=closeSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <div class="mobile-social-icons">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                    <!-- Add font awesome icons -->
+                    <a href="https://www.instagram.com/nexiom.online/" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-google"></a>
+                </div>
             </ul>
             <ul>
-                <li class="hideOnMobile"><a href="home.html">Home</a></li>
-                <li class="hideOnMobile"><a href="about.html">About</a></li>
-                <li class="hideOnMobile"><a href="services.html">Services</a></li>
-                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+
+                <li onclick=navback() class="hideOnMobile"><a href="home.html">Home</a></li>
+                <li onclick=navback() class="hideOnMobile"><a href="about.html">About</a></li>
+                <li onclick=navback() class="hideOnMobile"><a href="services.html">Services</a></li>
+                <li onclick=navback() class="hideOnMobile"><a href="contact.html">Contact</a></li>
                 <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </ul>
 
         </nav>
     </header>
+    <div class="content">
+        <h1 style="color: white;">About Us</h1>
+        <p style="color: white;">Welcome to NEXIOM, where imagination meets innovation.<br> We’re a passionate team of designers, developers, and digital strategists who believe that a well-built website is more than just code <br> it’s your brand’s handshake with the world.</p>
+        <h1 style="color: white;">Who Are We?</h1>
+        <p style="color: white;">Founded by tech enthusiasts with a vision to reshape the digital landscape,<br> NEXIOM was born out of a love for clean design and powerful functionality.<br> We specialize in crafting fast, scalable, and user-friendly websites that don’t just
+            look good they perform.</p>
+        <h1 style="color: white;">What We Do?</h1>
+        <h2>Web Development </h2>
+        <p style="color: white;">Tailored sites built from scratch with performance and aesthetics in mind.</p>
+        <h2>E-commerce Solutions</h2>
+        <p style="color: white;">From storefront setup to payment integration, we make online selling a breeze.</p>
+        <h2>UI/UX Design</h2>
+        <p style="color: white;">Pixel-perfect design that keeps users engaged.</p>
+        <h2>SEO & Performance Optimization</h2>
+        <p style="color: white;">Get found on Google with our expert SEO services. We optimize your site for speed and search engines.</p>
+        <h2>Maintenance & Support</h2>
+        <p style="color: white;">We don’t ghost you after launch. Count on us for updates and peace of mind.</p>
+        <h1 style="color: white;">Why Choose Us? </h1>
+        <p style="color: white;">Collaborative approach with full transparency - Cutting-edge tech stack and agile workflow - Passionate team that treats your vision like their own</p>
+        <h1 style="color: white;">Our Philosophy</h1>
+        <p style="color: white;">We don’t just build websites — we build relationships. Every project is a partnership where your goals become our blueprint.</p>
+
+    </div>
+
+
+
 
 
 
 </body>
+<footer>
+    <div style="display: flex; flex-direction: column; gap: 25px; " class="footer">
+
+
+        <p style="color: white;">&copy; 2025 NEXIOM. All rights reserved.</p>
+
+        <p style="color: white;">Follow us on:
+            <a href="https://www.instagram.com/nexiom.online/" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-google"></a>
+        </p>
+    </div>
+</footer>
 
 </html>
