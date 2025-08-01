@@ -2,13 +2,86 @@
 <html lang="en">
 
 <head meta charset="UTF-8" />
+<link rel="icon" href="favicon.png" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>NEXIOM - Contact</title>
 <link rel="stylesheet" href="style.css" />
 <script src="script.js"></script>
 <style>
-
+    .contact-form {
+        display: flex;
+    }
+    
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffffa2;
+        border-radius: 5px;
+    }
+    
+    .contact-form button {
+        width: 150px;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        appearance: none;
+        background-color: #FCFCFD;
+        border-radius: 4px;
+        border-width: 0;
+        box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        box-sizing: border-box;
+        color: #36395A;
+        cursor: pointer;
+        font-family: "JetBrains Mono", monospace;
+        height: 48px;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: box-shadow .15s, transform .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow, transform;
+        font-size: 18px;
+    }
+    
+    .contact-form button:focus {
+        box-shadow: #dadada 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    }
+    
+    .contact-form button:hover {
+        box-shadow: rgba(243, 243, 243, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        transform: translateY(-2px);
+    }
+    
+    .contact-form button:active {
+        box-shadow: #e0e0e0 0 3px 7px inset;
+        transform: translateY(2px);
+    }
+    
+    .contact-form input {
+        border: 3px solid #555;
+        height: 25px;
+        border-radius: 4px;
+    }
+    
+    .contact-form textarea {
+        border: 3px solid #555;
+        height: 60px;
+        border-radius: 4px;
+    }
 </style>
 
 </head>
@@ -26,7 +99,7 @@
     <div class='light x9'></div>
 
     <header>
-        <img src="logo.png" width="200px" alt="NEXIOM logo">
+        <img src="/logo.png" width="200px" alt="NEXIOM logo">
 
         <nav>
 
@@ -54,42 +127,44 @@
 
         </nav>
     </header>
-    <div class="body">
-        <div class="container">
-            <div class="content">
+    <div class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST">
 
-                <div class="right-side">
-                    <div class="topic-text">Send us a message</div>
-                    <p style="color: white;">If you have any types of quries related to our services, you can send us message from here. It's our pleasure to help you.</p>
-                    <form action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="497985d5-d512-4a2f-8568-108e3a63178b">
-                        <div class="input-box">
-                            <input type="text" name="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="input-box">
-                            <input type="email" name="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="input-box">
-                            <input type="tel" name="number" placeholder="Enter your Phone Number" required>
-                        </div>
-                        <div class="input-box message-box">
-                            <textarea name="message" placeholder="Enter your message"></textarea required>
-                        </div>
-                        <div class="button">
-                            <button type="submit">Submit Form</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="6570a1d9-1d94-4d7a-9a67-06febc84507f">
+
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <label>Name:</label>
+            <input type="text" name="name" required>
+            <label>E mail:</label>
+            <input type="email" name="email" required>
+            <label>Phone Number</label>
+            <input type="tel" name="phnumber" required>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+            <button type="submit">Send message</button>
+
+        </form>
     </div>
-
 
 </body>
 <footer>
     <div style="display: flex; flex-direction: column; gap: 25px; " class="footer">
 
+        <div style="display: flex; flex-direction: column; gap: 10px; justify-content: center;">
+            <a style="text-decoration: none; color: azure;" href="contact.html">Message Us</a>
+            <a style="text-decoration: none; color: azure;" href="about.html">About US</a>
+            <a style="text-decoration: none; color: azure;" href="services.html">Our Services</a>
+        </div>
 
+        <p style="color: white;">NEXIOM is a digital agency that specializes in Web Development, SEO, and Marketing. We are dedicated to helping businesses thrive online with innovative solutions and expert strategies.</p>
         <p style="color: white;">&copy; 2025 NEXIOM. All rights reserved.</p>
 
         <p style="color: white;">Follow us on:
